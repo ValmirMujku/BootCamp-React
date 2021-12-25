@@ -54,7 +54,7 @@ export default function LanguagesAPI() {
       </div>
 
       <div className='d-flex flex-column align-items-center justify-content-center w-100 ps-3 '>
-          <h3 className='text-light fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card text-light" aria-hidden="true"></i> PRICE: {data.price} &#36;</h3>
+          <h3 className='text-secondary fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card text-light" aria-hidden="true"></i> PRICE: {data.price} &#36;</h3>
           <div className='text-center'>
           <button type="button" class="btn btn-outline-light">JOIN BOOTCAMP-22</button>
           </div>
