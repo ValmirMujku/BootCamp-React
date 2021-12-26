@@ -16,19 +16,19 @@ export default function Profesor(props) {
 
       
     return (
-        <div className="card w-25 bg-dark  border border-light rounded"  style={{ fontFamily: "Roboto Condensed" }} >
+        <div className="card w-25 bg-dark  border border-light rounded"  style={{ fontFamily: "Roboto Condensed",boxShadow:'30px 25px 40px 5px grey' }} >
         <img src={props.src} className='rounded ' />
       <div className="card-body">
         <h5 className="card-title text-dark shadow-lg p-1 mb-3 bg-secondary rounded text-center fw-bold fst-italic">{props.name}</h5>
         
         <p className="card-text ">
-        <i class="fa fa-github text-light" aria-hidden="true"></i> <span className=' text-light'>GitHub: </span><a href={props.github} class="text-decoration-none">{props.githubUsername}</a>
+        <i className="fa fa-github text-light" aria-hidden="true"></i> <span className=' text-light'>GitHub: </span><a href={props.github} class="text-decoration-none">{props.githubUsername}</a>
         </p>
         <p className="card-text">
-        <i class="fa fa-codepen text-light" aria-hidden="true"></i> <span className='  text-light'>{props.level}</span> 
+        <i className="fa fa-codepen text-light" aria-hidden="true"></i> <span className='  text-light'>{props.level}</span> 
         </p>
         <p className="card-text">
-        <i class="fa fa-envelope text-light" aria-hidden="true"></i> <span className=' text-light'>{props.email}</span> 
+        <i className="fa fa-envelope text-light" aria-hidden="true"></i> <span className=' text-light'>{props.email}</span> 
         </p>
         <p className="card-text">
           <span className=' text-light'>{props.description}</span> 
@@ -40,6 +40,7 @@ export default function Profesor(props) {
         </div>
         
       </div>
+  
     </div>
     )
 }

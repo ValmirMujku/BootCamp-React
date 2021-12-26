@@ -6,7 +6,7 @@ import Warning from './Warning/Warning'
 export default function Courses() {
     return (
         <div>
-             <Warning/>
+             <Warning title='Courses that BootCamp Support'/>
               <LanguagesAPI/>
               <Footer/>
         </div>

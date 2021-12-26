@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
-    <nav className="navbar navbar-expand-xl navbar-dark bg-dark position-static">
+    <nav className="navbar navbar-expand-xl navbar-dark bg-dark  ">
       <div className="container-fluid">
         <a className="navbar-brand text-warning" href="#">
           <span className="text-danger fs-4">{"{ "}</span>
@@ -71,11 +71,7 @@ export default function Navigation() {
                 
               </Link>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
+          
               </ul>
             </li>
           </ul>
