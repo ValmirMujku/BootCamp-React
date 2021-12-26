@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Feedback() {
+export default function Api() {
     return (
         <div>
-            <h1>feedback</h1>
+            <h3>API</h3>
         </div>
     )
 }

@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
-    <nav className="navbar navbar-expand-xl navbar-dark bg-dark position-static"  >
+    <nav className="navbar navbar-expand-xl navbar-dark bg-dark position-static">
       <div className="container-fluid">
-        <a className="navbar-brand text-warning" href="#"><span className="text-danger fs-4">{'{ '}</span>
-          BOOTCAMP - PER PROGRAMERA<span className="text-primary fs-4">{' }'}</span>
+        <a className="navbar-brand text-warning" href="#">
+          <span className="text-danger fs-4">{"{ "}</span>
+          BOOTCAMP - PER PROGRAMERA
+          <span className="text-primary fs-4">{" }"}</span>
         </a>
         <button
           className="navbar-toggler"
@@ -22,22 +24,72 @@ export default function Navigation() {
         <div className="collapse navbar-collapse show">
           <ul className="navbar-nav me-auto mb-2 mb-xl-0">
             <li className="nav-item">
-                <Link to="/" className="nav-link fs-5 "><i className="fa fa-align-justify text-warning"></i>HOME</Link>
+              <Link to="/" className="nav-link fs-6 ">
+                <i className="fa fa-align-justify text-warning"></i> HOME
+              </Link>
             </li>
             <li className="nav-item">
-                <Link to="courses" className="nav-link fs-5 "><i className="fa fa-graduation-cap text-warning" aria-hidden="true"></i>COURSES</Link>
+              <Link to="courses" className="nav-link fs-6 ">
+                <i
+                  className="fa fa-graduation-cap text-warning"
+                  aria-hidden="true"
+                ></i> COURSES  
+                  
+              </Link>
             </li>
             <li className="nav-item">
-                <Link to="mentor" className="nav-link fs-5 "><i className="fa fa-user text-warning" aria-hidden="true"></i>MENTOR</Link>
+              <Link to="mentor" className="nav-link fs-6 ">
+                <i className="fa fa-user text-warning" aria-hidden="true"></i> MENTOR
+                  
+              </Link>
             </li>
-            <li className="nav-item">
-                <Link to="feedback" className="nav-link fs-5 "><i className="fa fa-rss text-warning" aria-hidden="true"></i>FEEDBACK</Link>
+          
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle fs-6"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="fa fa-clone text-warning" aria-hidden="true"></i> MATERIALS
+              </a>
+              <ul
+                className="dropdown-menu bg-dark"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                <Link to="books" className="nav-link fs-6 ">
+                <i className="fa fa-book text-warning" aria-hidden="true"></i> BOOKS
+                
+              </Link>
+                </li>
+                <li>
+                <Link to="api" className="nav-link fs-6 ">
+                <i className="fa fa-cogs text-warning" aria-hidden="true"></i> API's
+                
+              </Link>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-           <form className="d-flex">
-           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-light"  type="submit">Search</button>
-           </form>
+          <form className="d-flex">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-light" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
