@@ -74,6 +74,12 @@ export default function Navigation() {
           
               </ul>
             </li>
+            <li className="nav-item">
+              <Link to="groups" className="nav-link fs-6 ">
+              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(AdminPanel)</span> 
+                  
+              </Link>
+            </li>
           </ul>
           <form className="d-flex">
             <input
