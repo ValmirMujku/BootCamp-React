@@ -11,9 +11,10 @@ export default function AddGroups() {
         startDate: "",
         endDate: "",
         lecturer: "",
+        members:""
 
     });
-    const {name, type, startDate, endDate, lecturer} = group;
+    const {name, type, startDate, endDate, lecturer,members} = group;
 
     const onInputChange = (e)=>{
         setGroup({...group,[e.target.name]: e.target.value})
@@ -44,6 +45,9 @@ export default function AddGroups() {
                  </div>
                  <div className='form-group p-3'>
                     <input type='text' className='form-control' placeholder='Lecturer' name='lecturer' value={lecturer} onChange={e => onInputChange(e)}/>
+                 </div>
+                 <div className='form-group p-3'  >
+                    <input type='number' className='form-control' placeholder='Students: MAX-50' name='members' value={members} onChange={e => onInputChange(e)}/>
                  </div>
                  <div className='text-center p-3'>
                  <button className='btn btn-primary p-2'>Add Group</button>

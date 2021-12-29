@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <nav className="navbar navbar-expand-xl navbar-dark bg-dark  ">
       <div className="container-fluid">
-        <a className="navbar-brand text-warning" href="#">
+        <a className="navbar-brand text-light " href="#">
           <span className="text-danger fs-4">{"{ "}</span>
           BOOTCAMP - PER PROGRAMERA
           <span className="text-primary fs-4">{" }"}</span>
