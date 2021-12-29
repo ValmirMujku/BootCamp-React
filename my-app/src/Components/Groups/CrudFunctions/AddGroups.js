@@ -28,7 +28,7 @@ export default function AddGroups() {
         <div className='container w-50 mt-5 bg-dark'>
              <form onSubmit={e=> onSubmit(e)}  >
                  <div className='text-center p-4'>
-                     <h2 className='text-light'>Add a new Group</h2>
+                     <h2 className='text-light'><i className="fa fa-users text-danger" aria-hidden="true"></i> ADD A NEW GROUP</h2>
                      </div> 
                  <div className='form-group p-3'  >
                     <input type='text' className='form-control' placeholder='Name' name='name' value={name} onChange={e => onInputChange(e)}/>
@@ -46,7 +46,7 @@ export default function AddGroups() {
                     <input type='text' className='form-control' placeholder='Lecturer' name='lecturer' value={lecturer} onChange={e => onInputChange(e)}/>
                  </div>
                  <div className='text-center p-3'>
-                 <button className='btn btn-primary p-2'>Add User</button>
+                 <button className='btn btn-primary p-2'>Add Group</button>
                  </div>
                
              </form>

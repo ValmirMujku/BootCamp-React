@@ -21,7 +21,7 @@ export default function LanguagesAPI() {
 
     return (
         <>
-      {Api && Api.map(data=>  <div className="d-flex  bg-dark border border-light border-top-0 border-end-0 border-start-0"  style={{ fontFamily: "Roboto Condensed" }}>
+      {Api && Api.map(data=>  <div className="d-flex   border border-light border-top-0 border-end-0 border-start-0 "  style={{ fontFamily: "Roboto Condensed", backgroundColor:'#25383C' }}>
           
       <div className="container-fluid mt-2 mb-1">
         <iframe
@@ -30,11 +30,11 @@ export default function LanguagesAPI() {
           src={data.youtube}
         ></iframe>
       </div>
-      <div className="container">
+      <div className="container ">
         <div className="row">
           <div className="col-12">
             <div>
-              <h3 className='text-light pt-2'><i className="fa fa-video-camera text-danger" aria-hidden="true"></i> {data.title}</h3>
+              <h3 className='text-light fw-bold pt-2'><i className="fa fa-video-camera text-danger" aria-hidden="true"></i> {data.title}</h3>
             </div>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default function LanguagesAPI() {
         <div className="row ">
           <div className="col-12">
           <div>
-              <span className='placeholder-glow'>sdads</span>
-           <p className="fw-bold "><i class="fa fa-youtube-play text-secondary" aria-hidden="true"></i> <span className='bg-dark text-light'>Youtube-Channel: </span><a href={data.youtube} class="text-decoration-none bg-dark">Youtube</a> </p>
-           <p className=" fw-bold "><i class="fa fa-facebook-official text-secondary" aria-hidden="true"></i> <span className='bg-dark text-light'>Group-Community: </span><a href={data.facebook} class="text-decoration-none">Facebook</a> </p>
+              <span className='placeholder-glow'></span>
+           <p className="fw-bold "><i class="fa fa-youtube-play text-light" aria-hidden="true"></i> <span className='  text-light'>Youtube-Channel: </span><a href={data.youtube} class="text-decoration-none  ">Youtube</a> </p>
+           <p className=" fw-bold "><i class="fa fa-facebook-official text-light" aria-hidden="true"></i> <span className='  text-light'>Group-Community: </span><a href={data.facebook} class="text-decoration-none">Facebook</a> </p>
            <p className="shadow-lg  bg-body rounded border-4 fw-bold fst-italic"><i class="fa fa-code" aria-hidden="true"></i> <span>Link to web: </span><a href={data.perprogramera}class="text-decoration-none">PERPROGRAMER-WEB SITE</a> </p>
             
             </div>
@@ -54,7 +54,7 @@ export default function LanguagesAPI() {
       </div>
 
       <div className='d-flex flex-column align-items-center justify-content-center w-100 ps-3 '>
-          <h3 className='text-secondary fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card text-light" aria-hidden="true"></i> PRICE: {data.price} &#36;</h3>
+          <h3 className='text-secondary fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card  " style={{color:'rgb(234,188,106)'}} aria-hidden="true"></i> PRICE: <span style={{color:'rgb(234,188,106)'}}>{data.price} &#36;</span></h3>
           <div className='text-center'>
           <button type="button" class="btn btn-outline-light">JOIN BOOTCAMP-22</button>
           </div>

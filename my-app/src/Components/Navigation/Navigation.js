@@ -33,17 +33,17 @@ export default function Navigation() {
                 <i
                   className="fa fa-graduation-cap text-warning"
                   aria-hidden="true"
-                ></i> COURSES  
-                  
+                ></i>{" "}
+                COURSES
               </Link>
             </li>
             <li className="nav-item">
               <Link to="mentor" className="nav-link fs-6 ">
-                <i className="fa fa-user text-warning" aria-hidden="true"></i> MENTOR
-                  
+                <i className="fa fa-user text-warning" aria-hidden="true"></i>{" "}
+                MENTOR
               </Link>
             </li>
-          
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle fs-6"
@@ -53,33 +53,67 @@ export default function Navigation() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fa fa-clone text-warning" aria-hidden="true"></i> MATERIALS
+                <i className="fa fa-clone text-warning" aria-hidden="true"></i>{" "}
+                MATERIALS
               </a>
               <ul
                 className="dropdown-menu bg-dark"
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                <Link to="books" className="nav-link fs-6 ">
-                <i className="fa fa-book text-warning" aria-hidden="true"></i> BOOKS
+                  <Link to="books" className="nav-link fs-6 ">
+                    <i
+                      className="fa fa-book text-warning"
+                      aria-hidden="true"
+                    ></i>{" "}
+                    BOOKS
+                  </Link>
+                </li>
+                <li>
+                  <Link to="api" className="nav-link fs-6 ">
+                    <i
+                      className="fa fa-cogs text-warning"
+                      aria-hidden="true"
+                    ></i>{" "}
+                    API's
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle fs-6"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-users text-warning" aria-hidden="true"></i>{" "}
+                GROUPS
+              </a>
+              <ul
+                className="dropdown-menu bg-dark"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                <Link to="groups" className="nav-link fs-6 ">
+              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(AdminPanel)</span> 
                 
               </Link>
                 </li>
                 <li>
-                <Link to="api" className="nav-link fs-6 ">
-                <i className="fa fa-cogs text-warning" aria-hidden="true"></i> API's
+                <Link to="groupsview" className="nav-link fs-6 ">
+              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(GuestView)</span> 
                 
               </Link>
                 </li>
           
               </ul>
             </li>
-            <li className="nav-item">
-              <Link to="groups" className="nav-link fs-6 ">
-              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(AdminPanel)</span> 
-                  
-              </Link>
-            </li>
+
+
           </ul>
           <form className="d-flex">
             <input

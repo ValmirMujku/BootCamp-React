@@ -39,7 +39,7 @@ export default function EachBook() {
           </p>
           <div className='text-center'>
           <a href={dt.amazon_product_url}  className="btn btn-outline-dark fw-bold">
-          <i class="fa fa-download text-light" aria-hidden="true"></i> DOWNLOAD
+          <i class="fa fa-download text-light" aria-hidden="true"></i> BUY NOW
           </a>
           </div>
           

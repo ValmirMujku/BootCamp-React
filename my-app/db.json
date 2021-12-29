@@ -1,3 +1,28 @@
 {
-  "bootstrapGroups": []
+  "bootstrapGroups": [
+    {
+      "name": "BootStrap 2021",
+      "type": "Full Stack",
+      "startDate": "2021-12-23",
+      "endDate": "2021-12-31",
+      "lecturer": "Ylber Veliu",
+      "id": 1
+    },
+    {
+      "name": "123",
+      "type": "123",
+      "startDate": "2021-12-17",
+      "endDate": "2021-12-31",
+      "lecturer": "afaefa",
+      "id": 2
+    },
+    {
+      "name": "BootCamp - 22",
+      "type": "Full stack",
+      "startDate": "2022-01-01",
+      "endDate": "2022-10-29",
+      "lecturer": "Veliu Ylber",
+      "id": 3
+    }
+  ]
 }

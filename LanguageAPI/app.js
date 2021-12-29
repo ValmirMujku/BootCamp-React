@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-app.use(cors({origin: 'http://localhost:3001'})); //EDITED
+app.use(cors({origin: 'http://localhost:3005'})); //EDITED
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

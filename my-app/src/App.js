@@ -10,6 +10,7 @@ import Groups from "./Components/Groups/Groups";
 import NotFound from "./Components/Error/NotFound"; 
 import AddGroups from "./Components/Groups/CrudFunctions/AddGroups";
 import EditGroups from "./Components/Groups/CrudFunctions/EditGroups"; 
+import GroupsView from "./Components/Groups/GroupsView";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
               <Route exact path='groups' element={<Groups/>}></Route>
               <Route exact path='groups/add' element={<AddGroups/>}></Route>
               <Route  path='groups/edit/:id' element={<EditGroups/>}></Route>
+              <Route exact path='groupsview' element={<GroupsView/>}></Route>
               <Route path='*' element={<NotFound />} /> 
           </Routes>
        </BrowserRouter>

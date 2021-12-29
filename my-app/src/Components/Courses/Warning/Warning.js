@@ -20,8 +20,8 @@ export default function Warning(props) {
         className={props.clas}
         style={{ fontFamily: "Roboto Condensed" }}
       >
-        <span className={props.spanclas}><span className="text-danger fs-4">{'{ '}</span>
-          {props.title}<span className="text-primary fs-4">{' }'}</span>
+        <span className={props.spanclas}><span className={`text-danger ${props.spanSize}`}>{'{ '}</span>
+          {props.title}<span className={`text-primary ${props.spanSize}`}>{' }'}</span>
         </span>
       </div>
 

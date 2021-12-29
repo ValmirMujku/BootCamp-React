@@ -39,7 +39,7 @@ export default function EditGroups() {
         <div className='container w-50 mt-5 bg-dark'>
              <form onSubmit={e=> onSubmit(e)}  >
                  <div className='text-center p-4'>
-                     <h2 className='text-light'>Edit Group</h2>
+                     <h2 className='text-light'><i className="text-success fa fa-pencil" aria-hidden="true"></i> EDIT GROUP</h2>
                      </div> 
                  <div className='form-group p-3'  >
                     <input type='text' className='form-control' placeholder='Name' name='name' value={name} onChange={e => onInputChange(e)}/>
