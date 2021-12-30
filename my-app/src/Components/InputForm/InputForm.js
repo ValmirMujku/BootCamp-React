@@ -1,52 +1,172 @@
-import React from 'react'
+import React from "react";
+import { useEffect,useState } from "react";
+ 
+import WebFont from "webfontloader";
 
 export default function InputForm() {
-    return (
-        <div className='d-flex justify-content-center align-items-center'>
-            <div className='border border-dark mt-5 w-50'>
-                <form>
-                    <div className='text-center'>
-                        <h2>Register</h2>
-                    </div>
-                    <div className='form-group p-2'>
-                    <input type='text' className='form-control bg-dark text-light' placeholder='Name' name='name'  />
-                    </div>
-                    <div className='form-group p-2'>
-                    <input type='text' className='form-control bg-dark text-light' placeholder='Surname' name='name'  />
-                    </div>
-                    <div className='form-group p-2'>
-                    <input type='text' className='form-control bg-dark text-light' placeholder='e-mail' name='name'  />
-                    </div>
-                    <div className='form-group p-2 d-flex flex-row align-items-center'>
-                        <div className='w-50'>
-                        <label for="inputType" class="form-label fw-bold">Choose type of Course</label>
-                        </div>
-                        <div className='form-group w-100'>
-                        <select id="inputType" className="form-select bg-dark text-light">
-                             <option selected>Full-Stack</option>
-                             <option>Front-End</option>
-                             <option>Back-End</option>
-                         </select>
-                        </div>    
-                    </div>
-                    <div className='form-group p-2 d-flex flex-row align-items-center'>
-                        <div className='w-50'>
-                        <label for="inputType" className="form-label fw-bold">Choose the Lecturer</label>
-                        </div>
-                        <div className='form-group w-100'>
-                        <select id="inputType" className="form-select bg-dark text-light">
-                             <option selected>Ylber Veliu</option>
-                             <option>Bryan Cranston</option>
-                             <option>Alvaro Morte</option>
-                         </select>
-                        </div>    
-                    </div>
-                    <div className='text-center mt-3 mb-3'>
-                        <button className='btn btn-warning fw-bold'>Sign Up</button>
-                    </div>
-                </form>
+  const allInitValues = {
+    name: "",
+    surname: "",
+    email: "",
+    type: "",
+    lecturer: "",
+  };
+
+  const [allValues, setAllValues] = useState(allInitValues);
+  const [allErrors, setErrors] = useState({});
+  const [isSubmit, setSubmit] = useState(false);
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Roboto Condensed"],
+      },
+    });
+
+    console.log(allErrors);
+    if(Object.keys(allErrors).length===0 && isSubmit){
+        console.log(allValues);
+    }
+  }, [allErrors]);
+
+
+  const handleFunction = (e)=>{
+      const {name,value} = e.target;
+      setAllValues({...allValues,  [name] : value});
+       
+  }
+
+  const handleSubmit = (e) =>{
+        e.preventDefault();
+        setErrors(validate(allValues));
+        setSubmit(true);
+  }
+
+
+  const validate = (values) =>{
+        const errors = {};
+        const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if(!values.name){
+            errors.name = 'Name is Required!'
+        } else if(values.name.length <2 ){
+            errors.name = 'Short Name!'
+        }else if(/\d/.test(values.name)===true){
+            errors.name='Only letters!'
+        }
+        
+        if(!values.surname){
+            errors.surname = 'Surname is Required!'
+        }else if(values.surname.length <2 ){
+            errors.surname = 'Short Surname!'
+        }else if(/\d/.test(values.surname)===true){
+            errors.surname='Only letters!'
+        }
+
+        if(!values.email){
+            errors.email = 'email is Required!'
+        }else if(emailRegex.test(values.email)===false){
+            errors.email = 'Wrong format!'
+        } 
+       
+        return errors;
+  }
+
+
+  return (
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ fontFamily: "Roboto Condensed" }}
+    >
+      <div
+        className="border border-secondary mt-5 w-50"
+        style={{ boxShadow: "10px 10px 5px grey" }}
+      >
+        <form onSubmit={handleSubmit}>
+          <div className="text-center">
+            <h2>
+              <span className="text-danger fw-bold">{"{"}</span>Register
+              <span className="text-primary fw-bold">{"}"}</span>
+            </h2>
+          </div>
+          <div className="form-group p-2">
+            <input
+              type="text"
+              className="form-control bg-dark text-light "
+              placeholder="Name"
+              name="name"
+              value={allValues.name}
+              onChange={handleFunction}
+            />
+            <p className='text-danger'>{allErrors.name}</p>
+          </div>
+          <div className="form-group p-2">
+            <input
+              type="text"
+              className="form-control bg-dark text-light"
+              placeholder="Surname"
+              name="surname"
+              value={allValues.surname}
+              onChange={handleFunction}
+            />
+            <p className='text-danger'>{allErrors.surname}</p>
+          </div>
+          <div className="form-group p-2">
+            <input
+              type="text"
+              className="form-control bg-dark text-light"
+              placeholder="e-mail"
+              name="email"
+              value={allValues.email}
+              onChange={handleFunction}
+            />
+            <p className='text-danger'>{allErrors.email}</p>
+          </div>
+          <div className="form-group p-2 d-flex flex-row align-items-center">
+            <div className="w-50">
+              <label for="inputType" class="form-label fw-bold">
+                Choose type of Course
+              </label>
             </div>
-             
-        </div>
-    )
+            <div className="form-group w-100">
+              <select
+                id="inputType"
+                className="form-select bg-dark text-light"
+                name="type"
+                value={allValues.type}
+                onChange={handleFunction}
+              >
+                <option selected>Full-Stack</option>
+                <option>Front-End</option>
+                <option>Back-End</option>
+              </select>
+            </div>
+          </div>
+          <div className="form-group p-2 d-flex flex-row align-items-center">
+            <div className="w-50">
+              <label for="inputType" className="form-label fw-bold">
+                Choose the Lecturer
+              </label>
+            </div>
+            <div className="form-group w-100">
+              <select
+                id="inputType"
+                className="form-select bg-dark text-light"
+                name="lecturer"
+                value={allValues.lecturer}
+                onChange={handleFunction}
+              >
+                <option defaultValue={123}>Ylber Veliu</option>
+                <option>Bryan Cranston</option>
+                <option>Alvaro Morte</option>
+              </select>
+            </div>
+          </div>
+          <div className="text-center mt-3 mb-3">
+            <button className="btn btn-warning fw-bold">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }

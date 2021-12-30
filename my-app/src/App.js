@@ -11,7 +11,7 @@ import NotFound from "./Components/Error/NotFound";
 import AddGroups from "./Components/Groups/CrudFunctions/AddGroups";
 import EditGroups from "./Components/Groups/CrudFunctions/EditGroups"; 
 import GroupsView from "./Components/Groups/GroupsView";
-import InputForm from "./Components/InputForm/InputForm";
+import RegisterForm from "./Components/Groups/CrudFunctions/RegisterForm";
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
               <Route exact path='groups/add' element={<AddGroups/>}></Route>
               <Route  path='groups/edit/:id' element={<EditGroups/>}></Route>
               <Route exact path='groupsview' element={<GroupsView/>}></Route>
-              <Route exact path='groupsview/register' element={<InputForm/>}></Route>
+              <Route exact path='groupsview/register' element={<RegisterForm/>}></Route>
               <Route path='*' element={<NotFound />} /> 
           </Routes>
        </BrowserRouter>
