@@ -31,7 +31,7 @@ function App() {
               <Route exact path='groups/add' element={<AddGroups/>}></Route>
               <Route  path='groups/edit/:id' element={<EditGroups/>}></Route>
               <Route exact path='groupsview' element={<GroupsView/>}></Route>
-              <Route exact path='groupsview/register' element={<RegisterForm/>}></Route>
+              <Route exact path='groupsview/register/:id' element={<RegisterForm/>}></Route>
               <Route path='*' element={<NotFound />} /> 
           </Routes>
        </BrowserRouter>

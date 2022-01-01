@@ -1,9 +1,24 @@
 import React from "react";
 import { useEffect,useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios"; 
  
 import WebFont from "webfontloader";
 
 export default function InputForm() {
+
+    let history = useNavigate ();
+
+    const {id} = useParams();
+
+    const [group, setGroup] = useState({
+       
+        members: ""
+
+    });
+    const {members} = group;
+
+
   const allInitValues = {
     name: "",
     surname: "",
@@ -16,27 +31,55 @@ export default function InputForm() {
   const [allErrors, setErrors] = useState({});
   const [isSubmit, setSubmit] = useState(false);
 
+ 
+
+
+    const loadGroup = async () => {
+    const result = await axios.get(`http://localhost:3002/bootstrapGroups/${id}`);
+    setGroup(result.data)
+}
+
   useEffect(() => {
+    loadGroup();
+
+    AllAlright();
+    
+
     WebFont.load({
       google: {
         families: ["Roboto Condensed"],
       },
     });
 
-    console.log(allErrors);
-    if(Object.keys(allErrors).length===0 && isSubmit){
-        console.log(allValues);
-    }
+  
+   
   }, [allErrors]);
+
+  const AllAlright = async () =>{
+       
+    if(Object.keys(allErrors).length===0 && isSubmit){
+          
+        
+            var cMembers = parseInt(group.members);
+             cMembers +=1;
+            var cMembersStr = '' + cMembers;
+             setGroup(group.members = cMembersStr); 
+             
+            await axios.put(`http://localhost:3002/bootstrapGroups/${id}`,group);
+        history('/groupsview');
+        
+     }
+  } 
 
 
   const handleFunction = (e)=>{
       const {name,value} = e.target;
       setAllValues({...allValues,  [name] : value});
+   
        
   }
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async  e  =>{
         e.preventDefault();
         setErrors(validate(allValues));
         setSubmit(true);
@@ -82,7 +125,7 @@ export default function InputForm() {
         className="border border-secondary mt-5 w-50"
         style={{ boxShadow: "10px 10px 5px grey" }}
       >
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={e=> handleSubmit(e)}>
           <div className="text-center">
             <h2>
               <span className="text-danger fw-bold">{"{"}</span>Register
