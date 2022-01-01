@@ -26,7 +26,7 @@ export default function Language(props) {
 
       <div className="card-body bg-dark text-light">
         <h5 className="card-title text-center fw-bold"  style={{fontFamily: 'Neucha',color:props.color}}>{props.title}</h5>
-        <p className="card-text text-center">
+        <p className="card-text text-center " style={{fontSize:'11px'}}>
           {showText && props.description}
           {showSpan && <span className="fw-lighter">Get all the infos...</span>}{" "}
           <a

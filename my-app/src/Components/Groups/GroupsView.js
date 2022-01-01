@@ -96,7 +96,7 @@ export default function GroupsView() {
               </div>
               <div className="card-footer text-muted bg-dark d-flex flex-row justify-content-center">
                 <div
-                  className="spinner-border text-light mt-2 fs-3 mx-2"
+                  className= {` ${gg = new Date(gr.startDate) > dt?'spinner-border text-light mt-2 fs-3 mx-2' : ''}`} 
                   role="status"
                 >
                   <span className="visually-hidden">Loading...</span>
