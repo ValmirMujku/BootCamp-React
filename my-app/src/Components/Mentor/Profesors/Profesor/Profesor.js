@@ -31,7 +31,7 @@ export default function Profesor(props) {
         <i className="fa fa-envelope text-light" aria-hidden="true"></i> <span className=' text-light'>{props.email}</span> 
         </p>
         <p className="card-text">
-          <span className=' text-light'>{props.description}</span> 
+          <span className=' text-secondary fw-bold fst-italic blockquote-footer'>{props.description}</span> 
         </p>
         <div className='text-center'>
         <a   className="btn btn-primary">

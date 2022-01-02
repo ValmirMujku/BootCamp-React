@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import WebFont from "webfontloader";
+import { Link } from "react-router-dom";
 
 export default function Language(props) {
   const [showText, setShowText] = useState(false);
@@ -38,7 +39,7 @@ export default function Language(props) {
           </a>
         </p>
         <div className="text-center">
-          <a className="btn btn-primary ">ATTEND</a>
+          <Link to='/groupsview'  className="btn btn-primary ">ATTEND</Link>
         </div>
       </div>
     </div>

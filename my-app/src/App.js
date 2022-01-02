@@ -12,6 +12,8 @@ import AddGroups from "./Components/Groups/CrudFunctions/AddGroups";
 import EditGroups from "./Components/Groups/CrudFunctions/EditGroups"; 
 import GroupsView from "./Components/Groups/GroupsView";
 import RegisterForm from "./Components/Groups/CrudFunctions/RegisterForm";
+import Donation from "./Components/Donation/Donation";
+ 
 
 function App() {
 
@@ -32,6 +34,8 @@ function App() {
               <Route  path='groups/edit/:id' element={<EditGroups/>}></Route>
               <Route exact path='groupsview' element={<GroupsView/>}></Route>
               <Route exact path='groupsview/register/:id' element={<RegisterForm/>}></Route>
+              <Route exact path='register' element={<RegisterForm/>}></Route>
+              <Route exact path='donation' element={<Donation/>}></Route>
               <Route path='*' element={<NotFound />} /> 
           </Routes>
        </BrowserRouter>

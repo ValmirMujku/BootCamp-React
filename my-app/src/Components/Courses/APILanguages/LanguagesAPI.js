@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import WebFont from "webfontloader";
+import { Link } from 'react-router-dom';
 
 
 export default function LanguagesAPI() {
@@ -54,9 +55,9 @@ export default function LanguagesAPI() {
       </div>
 
       <div className='d-flex flex-column align-items-center justify-content-center w-100 ps-3 '>
-          <h3 className='text-secondary fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card  " style={{color:'rgb(234,188,106)'}} aria-hidden="true"></i> PRICE: <span style={{color:'rgb(234,188,106)'}}>{data.price} &#36;</span></h3>
+          <h4 className='text-secondary fst-italic' style={{ fontFamily: "Alfa Slab One" }}><i class="fa fa-credit-card  " style={{color:'rgb(234,188,106)'}} aria-hidden="true"></i> PRICE: <span style={{color:'rgb(234,188,106)'}}>{data.price} &#36;</span></h4>
           <div className='text-center'>
-          <button type="button" class="btn btn-outline-light">JOIN BOOTCAMP-22</button>
+          <Link to='/register' type="button" class="btn btn-outline-light">JOIN BOOTCAMP-22</Link>
           </div>
       </div>
 
