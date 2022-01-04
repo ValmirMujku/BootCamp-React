@@ -1,13 +1,13 @@
-import React from 'react';
-import EachApi from './EachApi';
+import React from "react";
+import EachApi from "./EachApi";
 
 export default function AllApi() {
-    return ( 
-        <div className='table-responsive'>
-            <table className="table">
+  return (
+    <div className="table-responsive">
+      <table className="table">
         <thead>
-          <tr >
-          <th scope="col">#</th>
+          <tr>
+            <th scope="col">#</th>
             <th scope="col">API</th>
             <th scope="col">HTTPS</th>
             <th scope="col">DESCRIPTION</th>
@@ -16,11 +16,9 @@ export default function AllApi() {
           </tr>
         </thead>
         <tbody>
-          <EachApi/>
-        
+          <EachApi />
         </tbody>
       </table>
-        </div> 
-       
-    )
+    </div>
+  );
 }

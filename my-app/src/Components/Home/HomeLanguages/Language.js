@@ -14,22 +14,28 @@ export default function Language(props) {
 
   useEffect(() => {
     WebFont.load({
-        google: {
-          families: ['Neucha']
-        }
-      });
-
-});
+      google: {
+        families: ["Neucha"],
+      },
+    });
+  });
 
   return (
     <div className="card w-25 mb-5 shadow-lg p-3 mb-5 bg-body rounded">
       <img src={props.src} alt={props.alt} className="card-img-top " />
 
       <div className="card-body bg-dark text-light">
-        <h5 className="card-title text-center fw-bold"  style={{fontFamily: 'Neucha',color:props.color}}>{props.title}</h5>
-        <p className="card-text text-center " style={{fontSize:'11px'}}>
+        <h5
+          className="card-title text-center fw-bold"
+          style={{ fontFamily: "Neucha", color: props.color }}
+        >
+          {props.title}
+        </h5>
+        <p className="card-text text-center " style={{ fontSize: "11px" }}>
           {showText && props.description}
-          {showSpan && <span className="fw-lighter">Get all the infos...</span>}{" "}
+          {showSpan && (
+            <span className="fw-lighter">Get all the infos...</span>
+          )}{" "}
           <a
             className="btn btn btn-outline-secondary  p-1"
             style={{ fontSize: "13px" }}
@@ -39,7 +45,9 @@ export default function Language(props) {
           </a>
         </p>
         <div className="text-center">
-          <Link to='/groupsview'  className="btn btn-primary ">ATTEND</Link>
+          <Link to="/groupsview" className="btn btn-primary ">
+            ATTEND
+          </Link>
         </div>
       </div>
     </div>

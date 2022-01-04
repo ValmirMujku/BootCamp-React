@@ -98,25 +98,19 @@ export default function Navigation() {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                <Link to="groups" className="nav-link fs-6 ">
-              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(AdminPanel)</span> 
-                
-              </Link>
+                  <Link to="groups" className="nav-link fs-6 ">
+                    <i class="fa fa-users text-warning" aria-hidden="true"></i>{" "}
+                    GROUPS <span className="fst-italic">-(AdminPanel)</span>
+                  </Link>
                 </li>
                 <li>
-                <Link to="groupsview" className="nav-link fs-6 ">
-              <i class="fa fa-users text-warning" aria-hidden="true"></i> GROUPS <span className='fst-italic'>-(GuestView)</span> 
-                
-              </Link>
+                  <Link to="groupsview" className="nav-link fs-6 ">
+                    <i class="fa fa-users text-warning" aria-hidden="true"></i>{" "}
+                    GROUPS <span className="fst-italic">-(GuestView)</span>
+                  </Link>
                 </li>
-          
               </ul>
-
-
             </li>
- 
-
-
           </ul>
           <form className="d-flex">
             <input

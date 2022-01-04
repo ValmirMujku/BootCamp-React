@@ -21,7 +21,7 @@ export default function Slider() {
 
       <div className="carousel-inner">
         <SliderImage
-          src="./Images/img1.jpg"  
+          src="./Images/img1.jpg"
           class="d-block w-100 img-fluid"
           alt="Slide 1"
           title="WE"
